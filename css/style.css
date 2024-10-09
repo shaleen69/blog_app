@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    counter-reset: section;
+    background: linear-gradient(to right, #f0f4f8, #e1e9ee);
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes buttonHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* login */
+
+.login {
+    width: 50%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fadeIn 0.6s ease-in-out; /* Fade-in effect */
+}
+
+.login h1 {
+    text-align: end;
+    padding: 5px;
+    color: #333;
+}
+
+.login input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #111;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.login input:focus {
+    border-color: #007BFF; /* Change border color on focus */
+}
+
+.login button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #007BFF, #00C6FF);
+    border: none;
+    color: #fff;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.login button:hover {
+    background: linear-gradient(45deg, #00C6FF, #007BFF); /* Reverse gradient */
+    animation: buttonHover 0.6s ease-in; /* Scale animation */
+}
+
+/* header */
+
+header {
+    background: #111;
+    color: #fff;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+.notifi {
+    background: green;
+    color: #fff;
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    animation: fadeIn 0.6s ease-in-out; /* Fade-in effect */
+}
+
+/* post */
+
+.main_content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.main_content .post_form {
+    width: 300px;
+    margin: 100px auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 30px;
+    background: white; /* Added background color */
+    border-radius: 10px; /* Rounded corners */
+    animation: slideIn 0.6s ease-in-out; /* Slide-in effect */
+}
+
+.main_content .post_form input,
+textarea {
+    width: 100%;
+    border: 1px solid #111;
+    padding: 10px;
+    margin: 20px 0;
+    transition: border-color 0.3s;
+}
+
+.main_content .post_form input:focus,
+.main_content .post_form textarea:focus {
+    border-color: #007BFF; /* Change border color on focus */
+}
+
+.main_content .post_form button {
+    width: 100%;
+    background: linear-gradient(45deg, #007BFF, #00C6FF);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: 0.5s ease-in-out;
+}
+
+.main_content .post_form button:hover {
+    background: linear-gradient(45deg, #00C6FF, #007BFF); /* Reverse gradient */
+    animation: buttonHover 0.6s ease-in; /* Scale animation */
+}
+
+/* update_btn */
+
+.my_blog {
+    display: none;
+}
+
+.update_btn {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/* notify */
+
+.notifiy {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: green;
+    color: #fff;
+    margin-top: 70px;
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    animation: fadeIn 0.6s ease-in-out; /* Fade-in effect */
+}
+
+/* my_content */
+
+.my_content {
+    width: 100%;
+    padding: 70px 50px;
+}
+
+.my_content table {
+    width: 100%;
+    margin: 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.my_content table tr {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.my_content table tr button {
+    padding: 5px 10px;
+    border: 1px solid #111;
+    transition: 0.5s ease-in;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.my_content table tr button.delete {
+    background: rgb(206, 12, 12); /* Darker red */
+}
+
+.my_content table tr button.update {
+    background: rgb(8, 67, 106);
+}
+
+.my_content table tr button:hover {
+    background: transparent;
+    color: #111;
+}
+
+/* id */
+
+.postNumber {
+    height: 20px;
+    display: inline-block;
+    width: 20px;
+}
+
+.postNumber::before {
+    counter-increment: section;
+    content: counter(section);
+}
+
+/* main */
+
+.main {
+    width: 70%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.post {
+    margin: 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+    background: white; /* Added background color */
+    border-radius: 10px; /* Rounded corners */
+    animation: fadeIn 0.6s ease-in-out; /* Fade-in effect */
+}
+
+.post h2 {
+    padding: 10px 0;
+    color: #007BFF; /* Heading color */
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    color: #fff;
+    background: #111;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
